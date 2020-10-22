@@ -9,6 +9,7 @@ class CleverOAuth2(BaseOAuth2):
     """
 
     name = 'clever-oauth2'
+    ID_KEY = 'client_id'
     AUTHORIZATION_URL = 'https://clever.com/oauth/authorize'
     ACCESS_TOKEN_URL = 'https://clever.com/oauth/tokens'
     USER_DETAILS_URL = 'https://api.clever.com/v2.0/me'
