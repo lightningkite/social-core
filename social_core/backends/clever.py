@@ -2,7 +2,6 @@ import base64
 
 from .oauth import BaseOAuth2
 
-
 class CleverOAuth2(BaseOAuth2):
     """
     Clever OAuth2 authentication backend
@@ -40,12 +39,13 @@ class CleverOAuth2(BaseOAuth2):
             'last_name': last_name,
         }
 
-    def auth_complete_params(self, state=None):
-        return {
-            'grant_type': 'authorization_code',  # request auth code
-            'code': self.data.get('code', ''),  # server response code
-            'redirect_uri': self.get_redirect_uri(state),
-        }
+    #def auth_complete_params(self, state=None):
+    #    state["client_id"] = '5a7a8821db09037d6082'
+    #    return {
+    #        'grant_type': 'authorization_code',  # request auth code
+    #        'code': self.data.get('code', ''),  # server response code
+    #        'redirect_uri': self.get_redirect_uri(state),
+    #    }
 
     def auth_headers(self):
         return {
