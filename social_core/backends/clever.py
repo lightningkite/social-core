@@ -2,6 +2,7 @@ import base64
 
 from .oauth import BaseOAuth2
 
+this is a syntax error
 class CleverOAuth2(BaseOAuth2):
     """
     Clever OAuth2 authentication backend
