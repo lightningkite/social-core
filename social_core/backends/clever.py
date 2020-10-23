@@ -32,6 +32,12 @@ class CleverOAuth2(BaseOAuth2):
         response = super().get_redirect_uri(state)
         return response
 
+    def auth_params(self, state=None):
+        import ipdb; ipdb.set_trace()
+        response = super().auth_params(state)
+        return response
+
+
     def get_user_details(self, response):
         import ipdb; ipdb.set_trace()
         username = response.get('id', '')
