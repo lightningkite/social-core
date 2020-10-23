@@ -29,7 +29,7 @@ class CleverOAuth2(BaseOAuth2):
 
     def get_redirect_uri(self, state=None):
         import ipdb; ipdb.set_trace()
-        reponse = super().get_redirect_uri(state)
+        response = super().get_redirect_uri(state)
         return response
 
     def get_user_details(self, response):
